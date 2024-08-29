@@ -1,20 +1,25 @@
 {
-  "name": "node-hello",
+  "name": "my-node-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Node.js project using Babel for ES6+ support.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node /home/cli1/build/index.js",
+    "build": "babel src -d /home/cli1/build",
+    "dev": "nodemon --exec babel-node src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johnpapa/node-hello.git"
+  "dependencies": {
+    "express": "^4.17.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/johnpapa/node-hello/issues"
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/cli": "^7.21.0",
+    "@babel/preset-env": "^7.21.0",
+    "nodemon": "^2.0.0"
   },
-  "homepage": "https://github.com/johnpapa/node-hello#readme"
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
