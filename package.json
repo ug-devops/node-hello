@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node /home/cli1/build/index.js",
-    "build": "babel src -d /home/cli1/build",
+    "build": "babel src -d ./build",
     "dev": "nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
